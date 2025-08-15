@@ -1,0 +1,69 @@
+.features {
+    padding: 32px 0 64px;
+}
+.grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0px 50px;
+    max-width: 1400px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    border: 1px solid #eef0f6;
+    min-width: 200px;
+    box-sizing: border-box;
+}
+
+.card h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 6px;
+    font-size: 1.05rem
+}
+
+.icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: inline-grid;
+    place-items: center;
+    color: #fff;
+    font-weight: 900
+}
+
+.i1 {
+    background: linear-gradient(135deg, #7b9bff, #8ad1ff)
+}
+
+.i2 {
+    background: linear-gradient(135deg, #67dd0a, #b6f829)
+}
+
+.i3 {
+    background: linear-gradient(135deg, #ff8a5b, #ffb36b)
+}
+
+.i4 {
+    background: linear-gradient(135deg, #8a5bff, #b36bff)
+}
+
+.i5 {
+    background: linear-gradient(135deg, #21bf73, #58e1a7)
+}
+
+.i6 {
+    background: linear-gradient(135deg, #ff5a7a, #ff9ab2)
+}
+
+.card p {
+    margin: 0;
+    color: #52576b
+}

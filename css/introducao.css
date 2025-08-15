@@ -1,0 +1,38 @@
+.introducao{
+ display: grid;
+ grid-template-columns: 1fr 500px;
+ align-items: top;
+ height: 450px;
+ background: linear-gradient(to right, #3E3F55, #393939);
+ align-items: center;
+}
+.introducao h1{
+    font-size: 2.3rem;
+    line-height: 1.125;
+    margin-bottom: 30px;
+    color: white;
+}
+.introducao p{
+    color: white;
+    margin-bottom: 15px;
+}
+.introducao a{
+    text-decoration: none;
+    color: white;
+    padding: 20px 0px;
+    display: block;
+}
+.img-detalhe{
+    width: 400px;
+    height: 400px;
+    margin-bottom: 50px;
+}
+.btncomeceAgora{
+    width: 250px;
+    background-color:#FF5C5C ;
+    border-radius: 10px;
+    text-align: center;
+}
+.conteudo{
+    padding-left: 100px;
+}

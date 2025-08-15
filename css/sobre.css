@@ -1,0 +1,22 @@
+.sobre{
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    max-width: 1400px;
+    box-sizing: border-box;
+    margin: auto;
+}
+.sobre img{
+    max-width: 500px;
+    max-height: 800px;
+    border-radius: 20px;
+}
+.sobre h2{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.texto-sobre{
+    font-size: 20px;
+}
