@@ -24,5 +24,9 @@
 .recurso-header p{
     max-width: 30ch;
 }
+.recurso-header h3{
+    margin-bottom: 10px;
+    
+}
 
 

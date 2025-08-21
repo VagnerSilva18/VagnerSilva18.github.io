@@ -17,3 +17,16 @@ img{
     max-width: 100%;
     display: block;
 }
+
+/* Estado inicial (invisível) */
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Estado visível (quando entrar na tela) */
+.scroll-animation.show {
+  opacity: 1;
+  transform: translateY(0);
+}

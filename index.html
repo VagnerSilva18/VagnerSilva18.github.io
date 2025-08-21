@@ -39,101 +39,118 @@
   <main class="introducao" id="introducao">
 
     <div class="conteudo">
-      <h1>Organize suas despesas, alcance<br>seus objetivos</h1>
-      <p>Mais organização, menos dor de cabeça é assim que o App OrganizaGastos funciona.<br>Defina metas, acompanhe
-        categorias e veja seus gastos em tempo real.</p>
+      <h1>Controle suas finanças,<br>realize seus objetivos</h1>
+      <p>Com o <strong>OrganizaGastos</strong>, você transforma a forma de lidar com o dinheiro.
+        Defina metas personalizadas, acompanhe seus gastos por categoria
+        e tenha uma visão clara e em tempo real da sua vida financeira.
+        Mais controle, menos preocupações.</p>
 
-      <div class="btncomeceAgora"><a href="#download">Comece agora - É Grátis!</a></div>
+      <div class="btncomeceAgora">
+        <a href="#download">Comece agora – 100% grátis!</a>
+      </div>
     </div>
 
-    <img src="./img/icon.png" alt="img lucro" class="img-detalhe">
+    <img src="./img/icon.png" alt="Ícone representando lucro e crescimento financeiro" class="img-detalhe">
 
   </main>
 
-  <section class="sobre" id="sobre">
 
-    <img src="./img/mao seguando celular.png" alt="Pessoa organizando finanças" class="img-sobre">
+  <section class="sobre scroll-animation" id="sobre">
+
+    <div class="slider">
+      <img src="./img/maoseguandocelular.png" alt="Tela inicial do app" class="img-sobre slide ativo">
+      <img src="./img/maoSegurando.png" alt="Tela Home" class="img-sobre slide">
+    </div>
+
+    <script>
+      let index = 0;
+      const slides = document.querySelectorAll('.slide');
+
+      function showSlide() {
+        slides.forEach((slide, i) => {
+          slide.style.display = i === index ? 'block' : 'none';
+        });
+        index = (index + 1) % slides.length;
+      }
+
+      setInterval(showSlide, 4000); // troca a cada 4s
+      showSlide(); // inicializa
+    </script>
+
     <div>
-      <h2>Controle simples das suas despesas</h2>
+      <h2>Realize seus sonhos com mais controle</h2>
       <p class="texto-sobre">
-
-        Fazer o controle de suas despesas ficou mais fácil. Organize suas contas,
-        entenda o que está acontecendo com o seu dinheiro,
-        gerencie seu orçamento e faça seus objetivos acontecerem.
-        Tudo isso de qualquer lugar e o melhor, é 100% gratuito! Faça o seu cadastro e
-        comece a usar o <strong>Gestor de Despesas Pessoais.</strong>
-
+        Com o <strong>Gestor de Despesas Pessoais</strong>, administrar seu dinheiro se torna simples e eficiente.
+        Ao organizar suas contas e acompanhar cada gasto, você conquista mais clareza sobre sua vida financeira
+        e dá passos reais em direção aos seus objetivos.
+        Seja a viagem dos sonhos, a compra de um carro ou simplesmente viver com mais tranquilidade:
+        o aplicativo é a ferramenta que transforma planejamento em conquistas.
+        E o melhor, tudo isso de onde você estiver e <strong>100% gratuito</strong>!
       </p>
     </div>
 
   </section>
 
 
-<section class="recursos" id="recursos" aria-label="Recursos do app">
-  <div class="grid-recursos">
 
-    <article class="recurso-card">
-      <figure class="recurso-media">
-        <img
-          src="./img/MovimentacaoMensal.png"
-          alt="Tela de movimentações financeiras"
-          width="350"
-          loading="lazy">
-      </figure>
-      <header class="recurso-header">
-        <h3>Movimentações</h3>
-        <p>Registre suas despesas, com opções para <strong>editar</strong>, <strong>excluir</strong> e <strong>filtrar por categoria</strong> ou período.</p>
-      </header>
-    </article>
+  <section class="recursos scroll-animation" id="recursos" aria-label="Recursos do app">
+    <div class="grid-recursos">
 
-    <article class="recurso-card">
-      <figure class="recurso-media">
-        <img
-          src="./img/GraficoMensal.png"
-          alt="Gráfico mensal de despesas"
-          width="350"
-          loading="lazy">
-      </figure>
-      <header class="recurso-header">
-        <h3>Dashboard</h3>
-        <p>Veja um <strong>gráfico interativo</strong> com o total do mês e a participação de cada categoria.</p>
-      </header>
-    </article>
+      <article class="recurso-card">
+        <figure class="recurso-media">
+          <img src="./img/GraficoMensal.png" alt="Gráfico mensal de despesas" width="350" loading="lazy">
+        </figure>
+        <header class="recurso-header">
+          <h3>Gráficos e Relatórios Inteligentes</h3>
+          <p>Tenha uma visão clara das suas finanças com relatórios visuais e intuitivos.
+            Os gráficos facilitam a análise dos gastos, permitindo criar um planejamento financeiro
+            realista e manter o equilíbrio entre as despesas.</p>
+        </header>
+      </article>
 
-    <article class="recurso-card">
-      <figure class="recurso-media">
-        <img
-          src="./img/Home.png"
-          alt="Tela de metas financeiras"
-          width="350"
-          loading="lazy">
-      </figure>
-      <header class="recurso-header">
-        <h3>Metas Financeiras</h3>
-        <p>Defina suas <strong>metas mensais</strong>, acompanhe a evolução e compare o planejado com o realizado.</p>
-      </header>
-    </article>
+      <article class="recurso-card">
+        <figure class="recurso-media">
+          <img src="./img/Home.png" alt="Tela de metas financeiras" width="350" loading="lazy">
+        </figure>
+        <header class="recurso-header">
+          <h3>Definição de Metas Financeiras</h3>
+          <p>Estabeleça metas personalizadas e acompanhe seu progresso.
+            Descubra se seu planejamento está adequado à sua realidade, faça ajustes quando necessário
+            e mantenha o foco em alcançar seus objetivos financeiros.</p>
+        </header>
+      </article>
 
-    <article class="recurso-card">
-      <figure class="recurso-media">
-        <img
-          src="./img/Login.png"
-          alt="Tela de login do aplicativo"
-          width="350"
-          loading="lazy">
-      </figure>
-      <header class="recurso-header">
-        <h3>100% Offline</h3>
-        <p>Funciona sem internet. Seus dados ficam <strong>salvos no dispositivo</strong> com segurança.</p>
-      </header>
-    </article>
+      <article class="recurso-card">
+        <figure class="recurso-media">
+          <img src="./img/Categorias.png" alt="Tela de categorias do aplicativo" width="350" loading="lazy">
+        </figure>
+        <header class="recurso-header">
+          <h3>Categorias Bem Organizadas</h3>
+          <p>Classifique suas despesas de forma simples e prática.
+            Todas as movimentações são categorizadas automaticamente, facilitando a análise detalhada
+            dos gastos por área e ajudando você a tomar decisões mais conscientes.</p>
+        </header>
+      </article>
 
-  </div>
-</section>
+      <article class="recurso-card">
+        <figure class="recurso-media">
+          <img src="./img/MovimentacaoMensal.png" alt="Tela de movimentações financeiras" width="350" loading="lazy">
+        </figure>
+        <header class="recurso-header">
+          <h3>Controle Total das Movimentações</h3>
+          <p>Gerencie seu dinheiro de forma prática.
+            Registre despesas, edite ou exclua lançamentos quando precisar
+            e utilize filtros por categoria ou período para ter controle absoluto das suas finanças.</p>
+        </header>
+      </article>
+
+    </div>
+  </section>
+
 
 
   <!-- DOWNLOAD -->
-  <section class="download" id="download">
+  <section class="download scroll-animation" id="download">
     <div class="container wrap">
       <div class="dl-box">
         <h3>Baixar APK</h3>
@@ -238,6 +255,23 @@
       © <time datetime="2025">2025</time> Vagner. Alguns direitos reservados.
     </div>
   </footer>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const elementos = document.querySelectorAll('.scroll-animation');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, { threshold: 0.2 }); // 20% visível já ativa
+
+      elementos.forEach(el => observer.observe(el));
+    });
+  </script>
 
 
 
