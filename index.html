@@ -38,55 +38,60 @@
 
   <main class="introducao" id="introducao">
 
-    <div class="conteudo">
-      <h1>Controle suas finanças,<br>realize seus objetivos</h1>
-      <p>Com o <strong>OrganizaGastos</strong>, você transforma a forma de lidar com o dinheiro.
-        Defina metas personalizadas, acompanhe seus gastos por categoria
-        e tenha uma visão clara e em tempo real da sua vida financeira.
-        Mais controle, menos preocupações.</p>
+    <div class="conteudo-principal">
+      <div class="conteudo-segundo">
+        <h1>Controle suas finanças,<br>realize seus objetivos</h1>
+        <p>Com o <strong>OrganizaGastos</strong>, você transforma a forma de lidar com o dinheiro.
+          Defina metas personalizadas, acompanhe seus gastos por categoria
+          e tenha uma visão clara e em tempo real da sua vida financeira.
+          Mais controle, menos preocupações.</p>
 
-      <div class="btncomeceAgora">
-        <a href="#download">Comece agora – 100% grátis!</a>
+        <div class="btncomeceAgora">
+          <a href="download/OrganizaGastos.apk">Comece agora – 100% grátis!</a>
+        </div>
       </div>
-    </div>
 
-    <img src="./img/icon.png" alt="Ícone representando lucro e crescimento financeiro" class="img-detalhe">
+      <img src="./img/icon.png" alt="Ícone representando lucro e crescimento financeiro" class="img-detalhe">
+    </div>
 
   </main>
 
 
   <section class="sobre scroll-animation" id="sobre">
 
-    <div class="slider">
-      <img src="./img/maoseguandocelular.png" alt="Tela inicial do app" class="img-sobre slide ativo">
-      <img src="./img/maoSegurando.png" alt="Tela Home" class="img-sobre slide">
-    </div>
+    <div class="sobre-container">
+      <div class="slider" aria-live="polite">
+        <img src="./img/maoseguandocelular.png" alt="Tela inicial do app" class="slide ativo">
+        <img src="./img/maoSegurando.png" alt="Tela Home do app" class="slide">
+      </div>
 
-    <script>
-      let index = 0;
-      const slides = document.querySelectorAll('.slide');
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          let index = 0;
+          const slides = document.querySelectorAll('.slider .slide');
 
-      function showSlide() {
-        slides.forEach((slide, i) => {
-          slide.style.display = i === index ? 'block' : 'none';
+          function showSlide() {
+            slides.forEach((s, i) => s.classList.toggle('ativo', i === index));
+            index = (index + 1) % slides.length;
+          }
+
+          showSlide();                 // mostra o primeiro
+          setInterval(showSlide, 4000); // troca a cada 4s
         });
-        index = (index + 1) % slides.length;
-      }
+      </script>
 
-      setInterval(showSlide, 4000); // troca a cada 4s
-      showSlide(); // inicializa
-    </script>
 
-    <div>
-      <h2>Realize seus sonhos com mais controle</h2>
-      <p class="texto-sobre">
-        Com o <strong>Gestor de Despesas Pessoais</strong>, administrar seu dinheiro se torna simples e eficiente.
-        Ao organizar suas contas e acompanhar cada gasto, você conquista mais clareza sobre sua vida financeira
-        e dá passos reais em direção aos seus objetivos.
-        Seja a viagem dos sonhos, a compra de um carro ou simplesmente viver com mais tranquilidade:
-        o aplicativo é a ferramenta que transforma planejamento em conquistas.
-        E o melhor, tudo isso de onde você estiver e <strong>100% gratuito</strong>!
-      </p>
+      <div class="sobre-texto">
+        <h2>Realize seus sonhos com mais controle</h2>
+        <p class="texto-sobre">
+          Com o <strong>Gestor de Despesas Pessoais</strong>, administrar seu dinheiro se torna simples e eficiente.
+          Ao organizar suas contas e acompanhar cada gasto, você conquista mais clareza sobre sua vida financeira
+          e dá passos reais em direção aos seus objetivos.
+          Seja a viagem dos sonhos, a compra de um carro ou simplesmente viver com mais tranquilidade:
+          o aplicativo é a ferramenta que transforma planejamento em conquistas.
+          E o melhor, tudo isso de onde você estiver e <strong>100% gratuito</strong>!
+        </p>
+      </div>
     </div>
 
   </section>
@@ -144,36 +149,6 @@
         </header>
       </article>
 
-    </div>
-  </section>
-
-
-
-  <!-- DOWNLOAD -->
-  <section class="download scroll-animation" id="download">
-    <div class="container wrap">
-      <div class="dl-box">
-        <h3>Baixar APK</h3>
-        <p>O aplicativo é gratuito. Para instalar no Android, você precisará autorizar <em>Fontes desconhecidas</em>.
-          Depois é só abrir o arquivo baixado.</p>
-        <ul>
-          <li>Compatível com Android 8.0 (Oreo) ou superior.</li>
-          <li>Sem anúncios intrusivos.</li>
-          <li>Tamanho ~ 80&nbsp;MB.</li>
-        </ul>
-        <a class="dl-btn" href="download/OrganizaGastos.apk">⬇ Baixar Agora</a>
-        <div class="note">Se o navegador alertar sobre segurança, confirme a manutenção do download — o APK abrirá
-          normalmente.</div>
-      </div>
-      <div class="steps">
-        <h3>Como instalar (passo a passo)</h3>
-        <ol>
-          <li>Toque em <strong>Baixar Agora</strong> e aguarde o download.</li>
-          <li>Abra o arquivo <strong>OrganizaGastos.apk</strong> na pasta <em>Downloads</em>.</li>
-          <li>Quando solicitado, permita a instalação de apps de fontes desconhecidas.</li>
-          <li>Conclua a instalação e abra o app.</li>
-        </ol>
-      </div>
     </div>
   </section>
 
