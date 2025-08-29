@@ -13,7 +13,6 @@
 <body>
 
   <header class="header">
-
     <div class="logo">
       <div><img src="./img/icon.png" alt="logo" width="50"></div>
       <div>
@@ -21,20 +20,27 @@
       </div>
     </div>
 
+    <!-- Botão hambúrguer -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
 
     <nav>
-      <ul class="header-menu">
+      <ul class="header-menu" id="menu">
         <li><a href="#introducao">Inicio</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#recursos">Recursos</a></li>
         <li><a href="#footer">Contato</a></li>
+        <!-- botão download incluído no menu para mobile -->
+        <li class="menu-download">
+          <a href="download/OrganizaGastos.apk">⬇ Download</a>
+        </li>
       </ul>
-
     </nav>
 
-    <a class="btn-download-header" href="download/OrganizaGastos.apk">⬇ Download</a>
-
+    <!-- botão download visível no desktop -->
+    <a class="btn-download-header desktop-only" href="download/OrganizaGastos.apk">⬇ Download</a>
   </header>
+
+
 
   <main class="introducao" id="introducao">
 
@@ -247,6 +253,37 @@
       elementos.forEach(el => observer.observe(el));
     });
   </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('.header');
+      const toggle = document.getElementById('menu-toggle');
+      const menuLinks = document.querySelectorAll('#menu a');
+
+      function closeMenu() {
+        header.classList.remove('is-open');
+      }
+
+      // abre/fecha no clique do hambúrguer
+      toggle.addEventListener('click', () => {
+        header.classList.toggle('is-open');
+      });
+
+      // fecha ao clicar em um link do menu
+      menuLinks.forEach(a => a.addEventListener('click', closeMenu));
+
+      // fecha com ESC
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
+      });
+
+      // fecha ao clicar fora do dropdown
+      document.addEventListener('click', (e) => {
+        if (!header.contains(e.target)) closeMenu();
+      });
+    });
+  </script>
+
 
 
 
