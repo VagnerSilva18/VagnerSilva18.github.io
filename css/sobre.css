@@ -1,0 +1,74 @@
+/* ===== SOBRE ===== */
+.sobre {
+  padding: 64px 20px;
+  box-sizing: border-box;
+  background: #fff; /* ajuste se quiser outro fundo */
+}
+
+.sobre-container {
+  display: grid;
+  grid-template-columns: 500px 1fr;          /* imagem | texto */
+  gap: 48px;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Título e texto */
+.sobre-texto h2 {
+  font-size: clamp(28px, 3.5vw, 44px);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.texto-sobre {
+  font-size: clamp(16px, 2vw, 20px);
+  max-width: 70ch;
+  color: #333;
+}
+
+/* Slider responsivo com transição suave */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 9 / 11;     /* ~450x550 */
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 6px 30px rgba(0,0,0,.12);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;       /* mantém a imagem inteira visível */
+  opacity: 0;
+  transition: opacity .6s ease-in-out;
+  display: block;            /* evita salto de layout */
+  background: #f7f7f7;       /* cor de fundo neutra ao trocar */
+}
+
+.slide.ativo {
+  opacity: 1;
+}
+
+/* Breakpoints */
+@media (max-width: 1200px) {
+  .sobre-container { gap: 36px; }
+}
+
+@media (max-width: 992px) {
+  .sobre-container {
+    grid-template-columns: 1fr;   /* empilha: slider acima, texto abaixo */
+    text-align: center;
+  }
+  .sobre-texto { margin: 0 auto; }
+  .texto-sobre { margin-left: auto; margin-right: auto; }
+}
+
+@media (max-width: 480px) {
+  .slider { max-width: 100%; aspect-ratio: 3 / 4; }
+}

@@ -1,0 +1,127 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3E3F55;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+.logo h2 {
+  font-size: 20px;
+  color: white;
+}
+
+.header-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.header-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 5px 15px;
+}
+
+.btn-download-header {
+  background: #ff5c5c;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 6px 16px rgba(255, 92, 92, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+}
+.btn-download-header:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(255, 92, 92, 0.35);
+  background: #ff4a4a;
+}
+
+/* Botão hamburguer */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    justify-content: center;   /* centraliza a logo */
+    position: sticky;          /* mantém fixo no topo */
+    top: 0;
+  }
+
+  .logo {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Esconde nav e botão download no layout base do mobile */
+  nav,
+  .btn-download-header {
+    display: none !important;
+  }
+
+  /* Hambúrguer sempre visível à direita */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001; /* acima do menu dropdown */
+  }
+  .header-menu a{
+    text-align: center;
+  }
+
+  /* Quando abrir (classe no header), mostramos o nav como dropdown */
+  .header.is-open nav {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;                 /* logo abaixo do header */
+    background: #3E3F55;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    animation: slideDown 200ms ease-out;
+    z-index: 1000;
+  }
+
+  .header.is-open .header-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 8px 0;
+  }
+
+  .header.is-open .header-menu li a {
+    display: block;
+    padding: 14px 20px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+}
+
+/* Animação de descida */
+@keyframes slideDown {
+  from { transform: translateY(-6px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+

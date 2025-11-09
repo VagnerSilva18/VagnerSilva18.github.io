@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meus Gastos</title>
+  <meta name="description"
+    content="Organize suas despesas, acompanhe metas e controle seu orçamento. App Meus Gastos: simples, seguro e gratuito.">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <div><img src="./img/icon.png" alt="logo" width="50"></div>
+      <div>
+        <h2>MeusGastos</h2>
+      </div>
+    </div>
+
+    <!-- Botão hambúrguer -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav>
+      <ul class="header-menu" id="menu">
+        <li><a href="#introducao">Inicio</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#recursos">Recursos</a></li>
+        <li><a href="#footer">Contato</a></li>
+        <!-- botão download incluído no menu para mobile -->
+        <li class="menu-download">
+          <a href="https://drive.google.com/drive/folders/1Ke9Rm00_Sh_l_L7_3TbOhFrx9RvGcue9?usp=drive_link">⬇ Download</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- botão download visível no desktop -->
+    <a class="btn-download-header desktop-only" href="https://drive.google.com/drive/folders/1Ke9Rm00_Sh_l_L7_3TbOhFrx9RvGcue9?usp=drive_link">⬇ Download</a>
+  </header>
+
+
+
+  <main class="introducao" id="introducao">
+
+    <div class="conteudo-principal">
+      <div class="conteudo-segundo">
+        <h1>Controle suas finanças,<br>realize seus objetivos</h1>
+        <p>Com o <strong>MeusGastos</strong>, você transforma a forma de lidar com o dinheiro.
+          Defina metas personalizadas, acompanhe seus gastos por categoria
+          e tenha uma visão clara e em tempo real da sua vida financeira.
+          Mais controle, menos preocupações.</p>
+
+        <div class="btncomeceAgora">
+          <a href="https://drive.google.com/drive/folders/1Ke9Rm00_Sh_l_L7_3TbOhFrx9RvGcue9?usp=drive_link">Comece agora – 100% grátis!</a>
+        </div>
+      </div>
+
+      <img src="./img/icon.png" alt="Ícone representando lucro e crescimento financeiro" class="img-detalhe">
+    </div>
+
+  </main>
+
+
+  <section class="sobre scroll-animation" id="sobre">
+
+    <div class="sobre-container">
+      <div class="slider" aria-live="polite">
+        <img src="./img/maoseguandocelular.png" alt="Tela inicial do app" class="slide ativo">
+        <img src="./img/maoSegurando.png" alt="Tela Home do app" class="slide">
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          let index = 0;
+          const slides = document.querySelectorAll('.slider .slide');
+
+          function showSlide() {
+            slides.forEach((s, i) => s.classList.toggle('ativo', i === index));
+            index = (index + 1) % slides.length;
+          }
+
+          showSlide();                 // mostra o primeiro
+          setInterval(showSlide, 4000); // troca a cada 4s
+        });
+      </script>
+
+
+      <div class="sobre-texto">
+        <h2>Realize seus sonhos com mais controle</h2>
+        <p class="texto-sobre">
+          Com o <strong>App Organizador de Despesas Pessoais</strong>, administrar seu dinheiro se torna simples e eficiente.
+          Ao organizar suas contas e acompanhar cada gasto, você conquista mais clareza sobre sua vida financeira
+          e dá passos reais em direção aos seus objetivos.
+          Seja a viagem dos sonhos, a compra de um carro ou simplesmente viver com mais tranquilidade:
+          o aplicativo é a ferramenta que transforma planejamento em conquistas.
+          E o melhor, tudo isso de onde você estiver e <strong>100% gratuito</strong>!
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <section class="recursos scroll-animation" id="recursos" aria-label="Recursos do app">
+    <div class="grid-recursos">
+
+      <article class="recurso-card">
+        <figure class="recurso-media">
+          <img src="./img/GraficoMensal.png" alt="Gráfico mensal de despesas" width="350" loading="lazy">
+        </figure>
+        <header class="recurso-header">
+          <h3>Gráficos e Relatórios Inteligentes</h3>
+          <p>Tenha uma visão clara das suas finanças com relatórios visuais e intuitivos.
+            Os gráficos facilitam a análise dos gastos, permitindo criar um planejamento financeiro
+            realista e manter o equilíbrio entre as despesas.</p>
+        </header>
+      </article>
+
+      <article class="recurso-card">
+        <figure class="recurso-media">
+          <img src="./img/Home.png" alt="Tela de metas financeiras" width="350" loading="lazy">
+        </figure>
+        <header class="recurso-header">
+          <h3>Definição de Metas Financeiras</h3>
+          <p>Estabeleça metas personalizadas e acompanhe seu progresso.
+            Descubra se seu planejamento está adequado à sua realidade, faça ajustes quando necessário
+            e mantenha o foco em alcançar seus objetivos financeiros.</p>
+        </header>
+      </article>
+
+      <article class="recurso-card">
+        <figure class="recurso-media">
+          <img src="./img/Categorias.png" alt="Tela de categorias do aplicativo" width="350" loading="lazy">
+        </figure>
+        <header class="recurso-header">
+          <h3>Categorias Bem Organizadas</h3>
+          <p>Classifique suas despesas de forma simples e prática.
+            Todas as movimentações são categorizadas automaticamente, facilitando a análise detalhada
+            dos gastos por área e ajudando você a tomar decisões mais conscientes.</p>
+        </header>
+      </article>
+
+      <article class="recurso-card">
+        <figure class="recurso-media">
+          <img src="./img/MovimentacaoMensal.png" alt="Tela de movimentações financeiras" width="350" loading="lazy">
+        </figure>
+        <header class="recurso-header">
+          <h3>Controle Total das Movimentações</h3>
+          <p>Gerencie seu dinheiro de forma prática.
+            Registre despesas, edite ou exclua lançamentos quando precisar
+            e utilize filtros por categoria ou período para ter controle absoluto das suas finanças.</p>
+        </header>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer" role="contentinfo">
+
+    <div class="logo-footer">
+      <div>
+        <img src="./img/icon.png" alt="Logo do OrganizaGastos" width="50" height="50" decoding="async">
+      </div>
+      <div>
+        <h2 class="brand">MeusGastos</h2>
+        <p class="muted">Mais organização, menos dor de cabeça.</p>
+      </div>
+    </div>
+
+    <div class="container foot">
+
+      <section aria-label="Sobre o desenvolvedor">
+        <h4>Sobre o desenvolvedor</h4>
+        <p class="muted">
+          Vagner Silva — Desenvolvedor Full Stack
+        </p>
+
+        <!-- Botões sociais -->
+        <div class="social-icons">
+          <a href="https://github.com/VagnerSilva18" class="icon-btn" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub">
+            <!-- Ícone GitHub -->
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.71.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.2-3.37-1.2-.46-1.2-1.12-1.52-1.12-1.52-.92-.64.07-.63.07-.63 1.02.07 1.56 1.07 1.56 1.07.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.08 0-1.12.39-2.03 1.04-2.75-.1-.26-.45-1.31.1-2.73 0 0 .85-.28 2.78 1.05a9.34 9.34 0 0 1 5.06 0c1.93-1.33 2.78-1.05 2.78-1.05.55 1.42.2 2.47.1 2.73.65.72 1.04 1.63 1.04 2.75 0 3.95-2.34 4.82-4.57 5.08.36.32.67.93.67 1.88 0 1.36-.01 2.46-.01 2.79 0 .27.18.59.69.49A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2z" />
+            </svg>
+          </a>
+
+          <a href="https://www.linkedin.com/in/vagner-silva-vieira-72b032254" class="icon-btn" target="_blank"
+            rel="noopener noreferrer" aria-label="LinkedIn">
+            <!-- Ícone LinkedIn -->
+            <svg viewBox="0 0 24 24" width="25" height="27" fill="currentColor" aria-hidden="true">
+              <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 
+              2.76 2.24 5 5 5h14c2.76 0 5-2.24 
+              5-5v-14c0-2.76-2.24-5-5-5zm-11 
+              19h-3v-10h3v10zm-1.5-11.28c-.96 
+              0-1.75-.79-1.75-1.75s.79-1.75 
+              1.75-1.75 1.75.79 
+              1.75 1.75-.79 1.75-1.75 
+              1.75zm13.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 
+              0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.88v1.37h.04c.4-.75 
+              1.38-1.54 2.84-1.54 3.04 0 3.6 
+              2 3.6 4.59v5.58z" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <address class="contact" aria-label="Contato">
+        <h4>Contato</h4>
+        <p class="muted">
+          WhatsApp:
+          <a href="https://wa.me/5599992025628" target="_blank" rel="noopener noreferrer">
+            +55 99 99202-5628
+          </a><br>
+          E-mail:
+          <a href="mailto:vagnerprogramador18@gmail.com?subject=Contato%20%5BOrganizaGastos%5D&body=Ol%C3%A1%20Vagner,%0AQuero%20falar%20sobre%20o%20app%20OrganizaGastos."
+            aria-label="Enviar e-mail para Vagner">
+            vagnerprogramador18@gmail.com
+          </a>
+          <span class="sep" aria-hidden="true"> · </span>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vagnerprogramador18@gmail.com&su=Contato%20%5BOrganizaGastos%5D&body=Ol%C3%A1%20Vagner"
+            target="_blank" rel="noopener noreferrer" aria-label="Enviar e-mail usando o Gmail Web">
+            Enviar pelo Gmail
+          </a>
+        </p>
+      </address>
+
+    </div>
+
+    <div class="container copyright">
+      © <time datetime="2025">2025</time> Vagner. Alguns direitos reservados.
+    </div>
+  </footer>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const elementos = document.querySelectorAll('.scroll-animation');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, { threshold: 0.2 }); // 20% visível já ativa
+
+      elementos.forEach(el => observer.observe(el));
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('.header');
+      const toggle = document.getElementById('menu-toggle');
+      const menuLinks = document.querySelectorAll('#menu a');
+
+      function closeMenu() {
+        header.classList.remove('is-open');
+      }
+
+      // abre/fecha no clique do hambúrguer
+      toggle.addEventListener('click', () => {
+        header.classList.toggle('is-open');
+      });
+
+      // fecha ao clicar em um link do menu
+      menuLinks.forEach(a => a.addEventListener('click', closeMenu));
+
+      // fecha com ESC
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
+      });
+
+      // fecha ao clicar fora do dropdown
+      document.addEventListener('click', (e) => {
+        if (!header.contains(e.target)) closeMenu();
+      });
+    });
+  </script>
+
+
+
+
+</body>
+
+</html>
